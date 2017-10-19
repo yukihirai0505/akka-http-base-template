@@ -14,10 +14,10 @@ object Main extends App with Config {
   implicit val log: LoggingAdapter = Logging(actorSystem, getClass)
   implicit val materializer: ActorMaterializer = ActorMaterializer()
 
-  val usersService = new SampleService()
+  val sampleService = new SampleService()
 
   val httpService = new HttpService(
-    usersService
+    sampleService
   )
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
