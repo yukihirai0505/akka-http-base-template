@@ -12,7 +12,7 @@ import scala.concurrent.ExecutionContextExecutor
 class HttpService(sampleService: SampleService
                  )(implicit ec: ExecutionContextExecutor, actorSystem: ActorSystem, materializer: ActorMaterializer) extends CorsSupport {
 
-  val sampleRouter = new sampleRoute(sampleService)
+  val sampleRouter = new SampleRoute(sampleService)
 
   val routes =
     pathPrefix("v1") {

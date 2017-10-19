@@ -8,7 +8,7 @@ import services.SampleService
 
 import scala.concurrent.ExecutionContextExecutor
 
-class sampleRoute(sampleRoute: SampleService
+class SampleRoute(sampleRoute: SampleService
                  )(implicit ec: ExecutionContextExecutor) extends CirceSupport {
 
   import sampleRoute._
